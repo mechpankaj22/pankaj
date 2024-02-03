@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My School Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to My School</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="loadHome()">Home</a>
+        <a href="#" onclick="loadCourses()">Courses</a>
+        <a href="#" onclick="loadContact()">Contact</a>
+    </nav>
+
+    <section id="content">
+        <h2>Home</h2>
+        <p>Welcome to our school website! Explore the various sections using the navigation above.</p>
+    </section>
+
+    <footer>
+        &copy; 2024 My School. All rights reserved.
+    </footer>
+
+    <script>
+        function loadHome() {
+            document.getElementById('content').innerHTML = `
+                <h2>Home</h2>
+                <p>Welcome to our school website! Explore the various sections using the navigation above.</p>`;
+        }
+
+        function loadCourses() {
+            document.getElementById('content').innerHTML = `
+                <h2>Courses</h2>
+                <ul>
+                    <li>Mathematics</li>
+                    <li>Science</li>
+                    <li>History</li>
+                </ul>`;
+        }
+
+        function loadContact() {
+            document.getElementById('content').innerHTML = `
+                <h2>Contact</h2>
+                <p>Principal: Pankaj Tiwari</p>
+                <p>Contact No: 123-945-06789</p>`;
+        }
+    </script>
+</body>
+
+</html>
